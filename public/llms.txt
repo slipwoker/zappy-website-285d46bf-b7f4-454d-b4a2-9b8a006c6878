@@ -7,37 +7,37 @@
 ## Pages
 
 ### בית
-https://-285d46bf.zappy5.app
+https://example.com
 חברת איטום מקצועית בישראל עם ניסיון של עשרות שנים. אנו מספקים פתרונות איטום מקיפים, ייעוץ איטום ופיקוח צמוד לכל פרויקט. התקשרו עוד היום לייעוץ ראשוני ללא התחייבות!
 
 ### שירותים
-https://-285d46bf.zappy5.app/services
+https://example.com/services
 מחפשים איטום גגות מחיר הוגן או ייעוץ איטום לפני בנייה? אנו מציעים מגוון שירותים כולל הזרקות, איטום מרתפים ועוד. לחצו לגלות את הפתרון המושלם עבור הנכס שלכם!
 
 ### אודות
-https://-285d46bf.zappy5.app/about
+https://example.com/about
 מטר טכנולוגיות מובילה בתחום האיטום בזכות בעלים עם ניסיון מעשי עשיר וצוות מקצועי. אנו משלבים ייעוץ איטום ופיקוח ללא פשרות. בואו לקרוא למה אנחנו הבחירה הבטוחה לעסק שלכם!
 
 ### צור קשר
-https://-285d46bf.zappy5.app/contact
+https://example.com/contact
 זקוקים לייעוץ איטום מקצועי או פיקוח על פרויקט? השאירו פרטים ונחזור אליכם במהירות עם פתרון מותאם אישית. מטר טכנולוגיות – השותף שלכם למבנה יבש ומוגן!
 
 ### תודה שפניתם אלינו | מטר טכנולוגיות
-https://-285d46bf.zappy5.app/thank-you
+https://example.com/thank-you
 מטר טכנולוגיות - תודה שפניתם אלינו | מטר טכנולוגיות
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://-285d46bf.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://-285d46bf.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://-285d46bf.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -47,8 +47,8 @@ Information about WCAG compliance and accessibility features.
 - (No contact details configured yet.)
 
 ### Contact form
-- URL: https://-285d46bf.zappy5.app/contact
-- Endpoint: https://-285d46bf.zappy5.app/api/email/contact-form
+- URL: https://example.com/contact
+- Endpoint: https://example.com/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -78,6 +78,6 @@ Waterproofing & Sealing Construction
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://-285d46bf.zappy5.app/sitemap.xml
-- Robots: https://-285d46bf.zappy5.app/robots.txt
-- Flattened page text (for LLMs): https://-285d46bf.zappy5.app/llms-full.txt
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
