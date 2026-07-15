@@ -1,0 +1,83 @@
+# מטר טכנולוגיות — Generative Engine Optimization Map
+
+> Matar Technologies is a professional waterproofing company with decades of industry experience. The company offers comprehensive waterproofing solutions of all types, along with expert consulting and supervision services. Led by an owner with extensive hands-on experience, the brand conveys reliability, professionalism, and technical expertise in the construction and infrastructure sector.
+
+---
+
+## Pages
+
+### בית
+https://-285d46bf.zappy5.app
+חברת איטום מקצועית בישראל עם ניסיון של עשרות שנים. אנו מספקים פתרונות איטום מקיפים, ייעוץ איטום ופיקוח צמוד לכל פרויקט. התקשרו עוד היום לייעוץ ראשוני ללא התחייבות!
+
+### שירותים
+https://-285d46bf.zappy5.app/services
+מחפשים איטום גגות מחיר הוגן או ייעוץ איטום לפני בנייה? אנו מציעים מגוון שירותים כולל הזרקות, איטום מרתפים ועוד. לחצו לגלות את הפתרון המושלם עבור הנכס שלכם!
+
+### אודות
+https://-285d46bf.zappy5.app/about
+מטר טכנולוגיות מובילה בתחום האיטום בזכות בעלים עם ניסיון מעשי עשיר וצוות מקצועי. אנו משלבים ייעוץ איטום ופיקוח ללא פשרות. בואו לקרוא למה אנחנו הבחירה הבטוחה לעסק שלכם!
+
+### צור קשר
+https://-285d46bf.zappy5.app/contact
+זקוקים לייעוץ איטום מקצועי או פיקוח על פרויקט? השאירו פרטים ונחזור אליכם במהירות עם פתרון מותאם אישית. מטר טכנולוגיות – השותף שלכם למבנה יבש ומוגן!
+
+### תודה שפניתם אלינו | מטר טכנולוגיות
+https://-285d46bf.zappy5.app/thank-you
+מטר טכנולוגיות - תודה שפניתם אלינו | מטר טכנולוגיות
+
+## Legal & Policy
+
+### Privacy Policy
+https://-285d46bf.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-285d46bf.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-285d46bf.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://-285d46bf.zappy5.app/contact
+- Endpoint: https://-285d46bf.zappy5.app/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About מטר טכנולוגיות
+Matar Technologies is a professional waterproofing company with decades of industry experience. The company offers comprehensive waterproofing solutions of all types, along with expert consulting and supervision services. Led by an owner with extensive hands-on experience, the brand conveys reliability, professionalism, and technical expertise in the construction and infrastructure sector.
+
+## Target Audience
+- מנהלי פרויקטים בבנייה
+- בעלי נכסים פרטיים
+- מנהלי מבנים מסחריים
+- חברות בנייה
+
+## Industry
+Waterproofing & Sealing Construction
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://-285d46bf.zappy5.app/sitemap.xml
+- Robots: https://-285d46bf.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://-285d46bf.zappy5.app/llms-full.txt
