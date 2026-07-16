@@ -626,6 +626,61 @@
     <!-- Mickidum Accessibility Toolbar lazy-loaded by runtime -->
     <style id="zappy-critical-above-fold-css">
 html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
+/* ZAPPY_CRITICAL_FIRST_PAINT_PARITY_V1 */
+
+/* ZAPPY_ANNOUNCEMENT_HEADER_OFFSET_CSS_V2 */
+:root {
+  --zappy-header-stack-height: calc(var(--zappy-announcement-height, 40px) + var(--header-height, 72px));
+}
+body:has(.zappy-announcement-bar) nav.navbar:not(.zappy-catalog-menu),
+body:has(.zappy-announcement-bar) header.navbar,
+body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-search-panel) {
+  top: var(--zappy-announcement-height, 40px) !important;
+}
+/* First-paint: pull fullscreen heroes behind the fixed announcement+nav so a
+   transparent --nav-bg does not flash the cream body strip (live FOUC that
+   preview never showed because preview injects the same underlap eagerly). */
+body:has(.zappy-announcement-bar) section[data-hero-type^="fullscreen"],
+body:has(.zappy-announcement-bar) .index-hero-section,
+body:has(.zappy-announcement-bar) main > section[class*="hero"]:first-of-type {
+  margin-top: calc(-1 * var(--zappy-header-stack-height)) !important;
+  padding-top: calc(var(--zappy-header-stack-height)) !important;
+}
+
+
+/* ZAPPY_CONTENT_ALIGNMENT_FIRST_PAINT_CSS_V1 */
+[data-zappy-content-align] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+[data-zappy-content-align^="top-"] { justify-content: flex-start !important; }
+[data-zappy-content-align^="upper-"],
+[data-zappy-content-align^="center-"],
+[data-zappy-content-align^="lower-"] { justify-content: center !important; }
+[data-zappy-content-align^="bottom-"] { justify-content: flex-end !important; }
+[data-zappy-content-align$="-left"],
+[data-zappy-content-align$="-mid-left"] {
+  align-items: flex-start !important;
+  text-align: start !important;
+}
+[data-zappy-content-align$="-center"] {
+  align-items: center !important;
+  text-align: center !important;
+}
+[data-zappy-content-align$="-right"],
+[data-zappy-content-align$="-mid-right"] {
+  align-items: flex-end !important;
+  text-align: end !important;
+}
+[data-zappy-content-align] [data-zappy-align-target] {
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-zappy-content-align$="-center"] [data-zappy-align-target],
+[data-zappy-content-align$="-center"] [data-zappy-align-target] > * {
+  text-align: center !important;
+}
+
 </style>
     <link rel="preload" href="/styles.css" as="style">
     <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
@@ -1260,66 +1315,6 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="pipelineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#00BFFF" stop-opacity="0.8"></stop>
-          <stop offset="30%" stop-color="#00BFFF" stop-opacity="0.4"></stop>
-          <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"></stop>
-        </linearGradient>
-      </defs>
-      <path d="M0,80 L0,70 Q150,65 300,55 T600,40 Q750,35 900,25 T1200,10 L1200,80 Z" fill="#050A0F"></path>
-      <path d="M0,70 Q150,65 300,55 T600,40 Q750,35 900,25 T1200,10" fill="#050A0F" stroke="url(#pipelineGrad)" stroke-width="2"></path>
-    </svg>
-  </div>
-</section><section data-band-index="0" class="index-hero-section" data-layout-spec="בית-hero" data-hero-type="side-by-side" id="section-1784127261847-o31cqfvfy">
-  <!-- Background Image -->
-  <img loading="eager" fetchpriority="high" data-placeholder="index-hero-image-1" data-context="Low-light cinematic construction rooftop waterproofing scene at dusk, workers applying liquid membrane with reflective safety vests, wet surfaces catching cyan work lights, industrial infrastructure in background, graphite and dark blue tones, moisture-scan texture visible on surfaces" width="1920" height="1080" src="/assets/site-image-index-hero-image-1.webp" alt="עבודות איטום מקצועיות באתר בנייה" class="index-hero-bg" decoding="async">
-
-  <!-- Scrim Overlay -->
-  <div class="index-hero-scrim" aria-hidden="true"></div>
-
-  <!-- Decorative Motifs -->
-  <div class="index-hero-decorations" aria-hidden="true">
-    <!-- Cyan Grid Lines -->
-    <svg class="index-hero-grid-lines" viewBox="0 0 800 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="gridFade-dup-1784127261847-0" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#00BFFF" stop-opacity="0.15"></stop>
-          <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"></stop>
-        </linearGradient>
-      </defs>
-      <line x1="0" y1="600" x2="300" y2="350" stroke="url(#gridFade)" stroke-width="1"></line>
-      <line x1="50" y1="600" x2="350" y2="350" stroke="url(#gridFade)" stroke-width="0.5"></line>
-      <line x1="0" y1="550" x2="200" y2="380" stroke="url(#gridFade)" stroke-width="0.5"></line>
-      <line x1="300" y1="350" x2="800" y2="0" stroke="url(#gridFade)" stroke-width="1"></line>
-      <line x1="350" y1="350" x2="800" y2="50" stroke="url(#gridFade)" stroke-width="0.5"></line>
-    </svg>
-
-    <!-- Radial Pulse Ring -->
-    <svg class="index-hero-pulse-ring" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="150" cy="150" r="140" fill="none" stroke="#00BFFF" stroke-width="1" opacity="0.08"></circle>
-      <circle cx="150" cy="150" r="110" fill="none" stroke="#00BFFF" stroke-width="1" opacity="0.06"></circle>
-      <circle cx="150" cy="150" r="70" fill="none" stroke="#00BFFF" stroke-width="1.5" opacity="0.1"></circle>
-      <circle cx="150" cy="150" r="30" fill="none" stroke="#00BFFF" stroke-width="2" opacity="0.15"></circle>
-    </svg>
-  </div>
-
-  <!-- Content Overlay -->
-  <div class="index-hero-content">
-    <div class="index-hero-text-group">
-      <h1>טכנולוגיות איטום מתקדמות להגנה מושלמת לאורך שנים</h1>
-      <h3>עם ניסיון של עשרות שנים – ייעוץ, ביצוע ופיקוח על כל סוגי האיטום</h3>
-      <p>מטר טכנולוגיות מספקת פתרונות איטום אמינים ומקיפים לפרויקטים מורכבים בבנייה, תשתיות, נכסים פרטיים ומבנים מסחריים. אנו מלווים קבלנים, אדריכלים ולקוחות פרטיים בכל שלבי הפרויקט.</p>
-    </div>
-    <div class="index-hero-ctas">
-      <a href="/contact" class="index-hero-btn-primary">בקש ייעוץ מקצועי</a>
-      <a href="/services" class="index-hero-btn-secondary">צפה בשירותי האיטום</a>
-    </div>
-  </div>
-
-  <!-- Bottom Divider: Luminous Cyan Pipeline SVG -->
-  <div class="index-hero-divider-wrapper" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="pipelineGrad-dup-1784127261847-1" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#00BFFF" stop-opacity="0.8"></stop>
           <stop offset="30%" stop-color="#00BFFF" stop-opacity="0.4"></stop>
           <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"></stop>
